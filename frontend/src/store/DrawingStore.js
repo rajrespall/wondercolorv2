@@ -2,7 +2,7 @@ import { create } from 'zustand'
 
 const useDrawingStore = create((set) => ({
   selectedColor: '#000000',
-  grid: Array(32).fill().map(() => Array(32).fill('#FFFFFF')),
+  grid: Array(32).fill().map(() => Array(40).fill('#FFFFFF')),
   colors: [
     '#FF0000', '#FF4500', '#FFA500', '#FFD700', '#FFFF00', 
     '#32CD32', '#008000', '#00FFFF', '#0000FF', '#4B0082',

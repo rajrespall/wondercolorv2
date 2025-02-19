@@ -24,7 +24,7 @@ function App() {
         spacing={{ xs: 2, sm: 4, md: 6 }}
         sx={{ 
           width: { xs: '95%', sm: '98%' }, 
-          marginTop: { xs: 4, sm: 6 },
+          marginTop: { xs: 1, sm: -5 },
           justifyContent: 'space-between',
           alignItems: 'flex-start',
           flexWrap: 'nowrap'
@@ -34,7 +34,7 @@ function App() {
           item 
           xs={4} 
           sx={{
-            marginTop: { xs: 1, sm: 2 } 
+            marginTop: { xs: 3, sm: 6 } 
           }}
         >
           <ColorPalette />
@@ -46,7 +46,8 @@ function App() {
           sx={{
             display: 'flex',
             justifyContent: 'flex-end',
-            marginRight: { xs: 2, sm: 8 } 
+            marginRight: { xs: 2, sm: 8 },
+            marginTop: { xs: 1, sm: 2 } 
           }}
         >
           <DrawingGrid />

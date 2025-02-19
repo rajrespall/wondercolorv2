@@ -8,12 +8,12 @@ function DrawingGrid() {
   return (
     <Box
       sx={{
-        width: 600, // Increased from 500 to 600
-        height: 600, // Increased from 500 to 600
+        width: 700, 
+        height: 500, 
         backgroundColor: 'white',
         border: '2px solid black',
         display: 'grid',
-        gridTemplateColumns: 'repeat(32, 1fr)',
+        gridTemplateColumns: 'repeat(40, 1fr)',
         gridTemplateRows: 'repeat(32, 1fr)',
       }}
     >

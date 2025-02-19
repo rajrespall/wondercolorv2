@@ -3,34 +3,44 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 function Header() {
   return (
-    <>
+    <Box
+      sx={{
+        position: 'relative',
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '1rem',
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        borderRadius: '40px',
+        margin: '0 auto',
+        maxWidth: '98%'
+      }}
+    >
       <Box
         component="img"
         src="/logo_red.png"
         alt="Wondercolor Logo"
         sx={{
-          position: 'absolute',
-          top: 20,
-          left: 20,
-          height: '40px', // Adjust this value based on your logo size
+          height: '40px',
           width: 'auto'
         }}
       />
 
       <Button
         sx={{
-          position: 'absolute',
-          top: 20,
-          right: 20,
           backgroundColor: 'rgba(255, 255, 255, 0.3)',
-          borderRadius: 4,
+          borderRadius: '12px',
           color: '#fff',
-          '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.5)' },
+          padding: '8px 16px',
+          '&:hover': { 
+            backgroundColor: 'rgba(255, 255, 255, 0.5)' 
+          },
         }}
       >
         <ExitToAppIcon />
       </Button>
-    </>
+    </Box>
   );
 }
 
