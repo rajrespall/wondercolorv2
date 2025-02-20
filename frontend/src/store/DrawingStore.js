@@ -3,6 +3,7 @@ import { create } from 'zustand'
 const useDrawingStore = create((set) => ({
   selectedColor: '#000000',
   grid: Array(40).fill().map(() => Array(56).fill('#FFFFFF')),
+  backgroundImage: '',
   colors: [
     '#FF0000', '#FF4500', '#FFA500', '#FFD700', '#FFFF00', 
     '#32CD32', '#008000', '#00FFFF', '#0000FF', '#4B0082',
@@ -11,6 +12,7 @@ const useDrawingStore = create((set) => ({
   ],
 
   setSelectedColor: (color) => set({ selectedColor: color }),
+  setBackgroundImage: (imageUrl) => set({ backgroundImage: imageUrl }),
   
   clearGrid: () => 
     set(() => ({

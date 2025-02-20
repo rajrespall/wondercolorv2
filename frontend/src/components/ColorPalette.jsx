@@ -1,5 +1,7 @@
 import { Box, IconButton, Button, Stack } from '@mui/material';
 import useDrawingStore from '../store/DrawingStore';
+import { useState } from 'react';
+import BackgroundModal from './BackgroundModal';
 
 function ColorPalette() {
   const colors = useDrawingStore((state) => state.colors);
@@ -7,6 +9,7 @@ function ColorPalette() {
   const setSelectedColor = useDrawingStore((state) => state.setSelectedColor);
   const clearGrid = useDrawingStore((state) => state.clearGrid);
   const grid = useDrawingStore((state) => state.grid);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSave = () => {
     const drawingData = JSON.stringify(grid);
@@ -69,6 +72,16 @@ function ColorPalette() {
       <Stack direction="row" spacing={2}>
         <Button 
           variant="contained" 
+          onClick={() => setIsModalOpen(true)}
+          sx={{
+            backgroundColor: '#2196F3',
+            '&:hover': { backgroundColor: '#1976D2' }
+          }}
+        >
+          Select Background
+        </Button>
+        <Button 
+          variant="contained" 
           onClick={handleSave}
           sx={{
             backgroundColor: '#4CAF50',
@@ -88,6 +101,11 @@ function ColorPalette() {
           Clear Grid
         </Button>
       </Stack>
+
+      <BackgroundModal 
+        open={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </Box>
   );
 }
